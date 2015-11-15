@@ -46,7 +46,7 @@ Below is an example of Eiffel Tower in Paris, France. The zoom level is 15, Get 
 ```
 (mapkit){"id":"eiffel",
 "lat":"48.858486",
-"lng":"2.294475",
+"long":"2.294475",
 "width":"100%",
 "height":"400px",
 "zoom":"15",
