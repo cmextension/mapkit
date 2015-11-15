@@ -44,7 +44,7 @@ You can display a map without creating a widget by using this shortcode:
 Below is an example of Eiffel Tower in Paris, France. The zoom level is 15, Get Direction link is not displayed, the map is 100% of page width and 400px high.
 
 ```
-(mapkit){"id":"abc",
+(mapkit){"id":"eiffel",
 "lat":"48.858486",
 "lng":"2.294475",
 "width":"100%",
