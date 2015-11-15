@@ -1,0 +1,21 @@
+{
+	"name": "cmextension/mapkit",
+	"type": "pagekit-extension",
+	"version": "0.0.1",
+	"title": "Mapkit",
+	"description": "Display Google Maps with marker.",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "CMExtension",
+			"email": "cmext.vn@gmail.com",
+			"homepage": "http://pagekit.cmext.vn/"
+		}
+	],
+	"extra": {
+		"icon": "icon.svg"
+	},
+	"archive": {
+		"exclude": ["node_modules"]
+	}
+}

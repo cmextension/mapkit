@@ -1,0 +1,59 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pagekit UNKNOWN (cmextension/mapkit, messages)\n"
+"POT-Creation-Date: 2015-11-14 06:08+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Get Direction"
+msgstr ""
+
+msgid "There was a problem contacting the Google servers."
+msgstr ""
+
+msgid "This request was invalid."
+msgstr ""
+
+msgid "The webpage has gone over the requests limit in too short a period of time."
+msgstr ""
+
+msgid "The webpage is not allowed to use the geocoder."
+msgstr ""
+
+msgid "A geocoding request could not be processed due to a server error. The request may succeed if you try again."
+msgstr ""
+
+msgid "No result was found."
+msgstr ""
+
+msgid "Please enter an address."
+msgstr ""
+
+msgid "Location"
+msgstr ""
+
+msgid "Search for location by address"
+msgstr ""
+
+msgid "Address"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Map's width"
+msgstr ""
+
+msgid "500px, 100%"
+msgstr ""
+
+msgid "Map's height"
+msgstr ""
+
+msgid "Display Get Direction link below the map"
+msgstr ""
+
