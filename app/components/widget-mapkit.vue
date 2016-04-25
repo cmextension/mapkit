@@ -6,7 +6,7 @@
             <div class="uk-form-row">
                 <label for="form-title" class="uk-form-label">{{ 'Title' | trans }}</label>
                 <div class="uk-form-controls">
-                    <input id="form-title" class="uk-form-width-large" type="text" name="title" v-model="widget.title" v-validate="required">
+                    <input class="uk-width-1-1 uk-form-large" type="text" name="title" :placeholder="'Enter Title' | trans" v-model="widget.title" v-validate:required>
                     <p class="uk-form-help-block uk-text-danger" v-show="form.title.invalid">{{ 'Title cannot be blank.' | trans }}</p>
                 </div>
             </div>
@@ -22,7 +22,7 @@
                 <label for="form-address" class="uk-form-label">{{ 'Search for location by address' | trans }}</label>
                 <div class="uk-form-controls">
                     <input type="text" id="form-address" name="address" placeholder="{{ 'Address' | trans }}" class="uk-form-width-large" v-model="widget.data.address">
-                    <span id="search-button" class="uk-button" v-on="click:getCoordinates">{{ 'Search' | trans }}</span>
+                    <span id="search-button" class="uk-button" v-on:click="getCoordinates">{{ 'Search' | trans }}</span>
                 </div>
             </div>
 
@@ -83,6 +83,10 @@
 
         props: ['widget', 'config', 'form'],
 
+        created: function () {
+            this.$options.partials = this.$parent.$options.partials;
+        },
+
         ready: function() {
             this.lat = this.widget.data.lat || 0;
             this.lng = this.widget.data.lng || 0;
@@ -131,7 +135,7 @@
                 });
             },
             getCoordinates: function() {
-                address = this.widget.data.address;
+                address = this.widget.data.address || '';
 
                 if (address != '') {
                     geocoder = new google.maps.Geocoder();
@@ -165,7 +169,7 @@
         }
     };
 
-    window.Widgets.components['mapkit:settings'] = module.exports;
+    window.Widgets.components['cmextension-mapkit:settings'] = module.exports;
 
     var map;
     var marker;

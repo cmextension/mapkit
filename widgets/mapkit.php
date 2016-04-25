@@ -1,13 +1,16 @@
 <?php
 return [
-	'name' => 'mapkit',
+	'name' => 'cmextension/mapkit',
 
 	'label' => 'Mapkit',
 
 	'events' => [
 		'view.scripts' => function ($event, $scripts) use ($app) {
-			$scripts->register('widget-mapkit-api', '//maps.googleapis.com/maps/api/js', ['~widgets']);
-			$scripts->register('widget-mapkit', 'mapkit:app/bundle/widget-mapkit.js', ['~widgets']);
+			$apiKey = $app->config('cmextension/mapkit')->get('api_key');
+			$apiUrl = '//maps.googleapis.com/maps/api/js?key=' . $apiKey;
+
+			$scripts->register('widget-mapkit-api', $apiUrl, ['~widgets']);
+			$scripts->register('widget-mapkit', 'cmextension/mapkit:app/bundle/widget-mapkit.js', '~widgets');
 		}
 	],
 
@@ -32,7 +35,7 @@ return [
 		}
 
 
-		return $app['view']('mapkit/widget-mapkit.php',
+		return $app['view']('views:/widget-mapkit.php',
 			compact('widget', 'map_id', 'lat', 'lng', 'width', 'height', 'zoom', 'get_direction'))
 		;
 	}

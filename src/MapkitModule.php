@@ -11,4 +11,9 @@ class MapkitModule extends Module
 	{
 		$app->subscribe(new MapkitPlugin());
 	}
+
+	public function renderMap(App $app, $data)
+	{
+		return $app->view('cmextension/mapkit/widget-mapkit.php', compact('data'));
+	}
 }
