@@ -57,7 +57,9 @@ class MapkitPlugin implements EventSubscriberInterface
 				$height = $height . 'px';
 			}
 
-			return App::view('widget-mapkit.php',
+			$app = App::getInstance();
+
+			return $app->view('views:widget-mapkit.php',
 				compact('widget', 'map_id', 'lat', 'lng', 'width', 'height', 'zoom', 'get_direction')
 			);
 		}

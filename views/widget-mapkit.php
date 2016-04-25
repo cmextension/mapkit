@@ -1,4 +1,8 @@
-<?php $view->script('google-maps', '//maps.googleapis.com/maps/api/js', 'google'); ?>
+<?php
+$apiKey = $app->config('cmextension/mapkit')->get('api_key');
+$apiUrl = '//maps.googleapis.com/maps/api/js?key=' . $apiKey;
+$view->script('google-maps', $apiUrl, 'google');
+?>
 <div class="uk-width-1-1">
 	<div id="<?php echo $map_id; ?>" style="width: <?php echo $width; ?>; height: <?php echo $height; ?>"></div>
 	<?php if ($get_direction) : ?>
