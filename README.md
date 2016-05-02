@@ -4,11 +4,7 @@ Mapkit is a simple extension for [Pagekit CMS](http://pagekit.com) to display Go
 
 ## Installation
 
-In your Pagekit back-end, you navigate to System -> Extensions, click Upload button and select the zip package you download from [Github's releases](https://github.com/cmextension/mapkit/releases).
-
-## Configuration
-
-To use your Google Maps API key, you navigate to System -> Extensions, click "Mapkit" and enter your Google Maps API key into "Google Maps API Key" field.
+In your Pagekit back-end, you navigate to System -> Extensions, click Upload button and select the zip package you download from this repository.
 
 ## Usage
 
